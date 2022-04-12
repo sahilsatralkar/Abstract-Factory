@@ -11,9 +11,7 @@ protocol Order {
 ///Concrete products
 
 class FrenchFries : Order {
-    
-    let ingredient = ["Potato"]
-    
+        
     init(){
         acceptOrder()
         prepareOrder()
@@ -33,9 +31,7 @@ class FrenchFries : Order {
 }
 
 class LemonSoda : Order {
-    
-    let ingredient = ["Lemon"]
-    
+        
     init() {
         acceptOrder()
         prepareOrder()
@@ -54,9 +50,7 @@ class LemonSoda : Order {
 }
 
 class CheeseBurger : Order {
-    
-    let ingredients = ["bread","cheese"]
-    
+        
     init() {
         acceptOrder()
         prepareOrder()
@@ -76,9 +70,7 @@ class CheeseBurger : Order {
 }
 
 class MargheritaPizza : Order {
-    
-    let ingredients = ["dough","yeast"]
-    
+        
     init() {
         acceptOrder()
         prepareOrder()
