@@ -3,6 +3,7 @@ import UIKit
 ///Abstract product
 
 protocol Order {
+    var orderName: String { get }
     func acceptOrder()
     func prepareOrder()
     func thankForOrder()
@@ -11,79 +12,91 @@ protocol Order {
 ///Concrete products
 
 class FrenchFries : Order {
-        
+    
+    let orderName: String
+    
     init(){
+        orderName = "French fries"
         acceptOrder()
         prepareOrder()
         thankForOrder()
     }
     func acceptOrder() {
-        print("French fries is being prepared")
+        print("Your \(orderName) is being prepared")
     }
     
     func prepareOrder() {
-        print("French fries is ready")
+        print("\(orderName) is ready")
     }
     
     func thankForOrder() {
-        print("Thank you for your order. Enjoy your French fries!")
+        print("Thank you for your order. Enjoy your \(orderName)!")
     }
 }
 
 class LemonSoda : Order {
+    
+    var orderName: String
         
     init() {
+        orderName = "Lemon soda"
         acceptOrder()
         prepareOrder()
         thankForOrder()
     }
     
     func acceptOrder() {
-        print("Lemon soda is being prepared")
+        print("Your \(orderName) is being prepared")
     }
     func prepareOrder() {
-        print("Lemon soda is ready")
+        print("\(orderName) is ready")
     }
     func thankForOrder() {
-        print("Thank you for your order. Enjoy your Lemon soda!")
+        print("Thank you for your order. Enjoy your \(orderName)!")
     }
 }
 
 class CheeseBurger : Order {
+    
+    var orderName: String
         
     init() {
+        orderName = "Cheese burger"
         acceptOrder()
         prepareOrder()
         thankForOrder()
     }
     func acceptOrder() {
-        print("Cheese burger is being prepared")
+        print("Your \(orderName) is being prepared")
     }
     func prepareOrder() {
-        print("Cheese burger is ready")
+        print("\(orderName) is ready")
     }
     
     func thankForOrder() {
-        print("Thank you for your order. Enjoy your Cheese burger!")
+        print("Thank you for your order. Enjoy your \(orderName)!")
     }
     
 }
 
 class MargheritaPizza : Order {
+    
+    var orderName: String
         
     init() {
+        orderName = "Margherita pizza"
         acceptOrder()
         prepareOrder()
         thankForOrder()
     }
     func acceptOrder() {
-        print("Margherita pizza is being prepared")
+        print("\(orderName) is being prepared")
     }
     func prepareOrder() {
-        print("Margherita pizza is ready")
+        print("\(orderName) is ready")
     }
     func thankForOrder() {
-        print("Thank you for your order. Enjoy your Margherita pizza!")
+        print("Thank you for your order. Enjoy your \(orderName)!")
     }
 }
 
