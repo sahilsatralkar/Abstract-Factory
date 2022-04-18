@@ -176,3 +176,12 @@ client3.startOrder()
 
 let client4 = Client(clientName: "Rajesh", orderItem: .FrenchFries)
 client4.startOrder()
+
+
+//Extension
+extension OrderFactory {
+    func optionalMethod1() -> String { "" }
+}
+extension OrderFactory {
+    func optionalMethod2() { }
+}
