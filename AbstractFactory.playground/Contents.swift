@@ -120,18 +120,17 @@ class LemonSodaFactory : OrderFactory {
     }
 }
 
-class MargheritaPizzaFactory: OrderFactory {
-    func createOrder() -> Order {
-        return MargheritaPizza()
-    }
-}
-
 class CheeseBurgerFactory : OrderFactory {
     func createOrder() -> Order {
         return CheeseBurger()
     }
 }
 
+class MargheritaPizzaFactory: OrderFactory {
+    func createOrder() -> Order {
+        return MargheritaPizza()
+    }
+}
 
 
 //Client
