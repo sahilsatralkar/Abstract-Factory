@@ -108,6 +108,12 @@ protocol OrderFactory {
 
 
 //Product Factories
+class FrenchFriesFactory : OrderFactory {
+    func createOrder() -> Order {
+        return FrenchFries()
+    }
+}
+
 class LemonSodaFactory : OrderFactory {
     func createOrder() -> Order {
         return LemonSoda()
@@ -125,11 +131,7 @@ class CheeseBurgerFactory : OrderFactory {
         return CheeseBurger()
     }
 }
-class FrenchFriesFactory : OrderFactory {
-    func createOrder() -> Order {
-        return FrenchFries()
-    }
-}
+
 
 
 //Client
