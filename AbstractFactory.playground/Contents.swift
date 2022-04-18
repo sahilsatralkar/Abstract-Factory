@@ -107,7 +107,7 @@ protocol OrderFactory {
 }
 
 
-//Product Factories
+//Concrete Factories
 class FrenchFriesFactory : OrderFactory {
     func createOrder() -> Order {
         return FrenchFries()
