@@ -1,7 +1,7 @@
 import UIKit
 
-///Abstract product
 
+//Abstract product
 protocol Order {
     var orderName: String { get }
     func acceptOrder()
@@ -9,8 +9,8 @@ protocol Order {
     func thankForOrder()
 }
 
-///Concrete products
 
+//Concrete products
 class FrenchFries : Order {
     
     let orderName: String
@@ -100,15 +100,14 @@ class MargheritaPizza : Order {
     }
 }
 
-///Abstract Factory
 
+//Abstract Factory
 protocol OrderFactory {
     func createOrder() -> Order
-     
 }
 
 
-///Product Factories
+//Product Factories
 class LemonSodaFactory : OrderFactory {
     func createOrder() -> Order {
         return LemonSoda()
@@ -116,14 +115,12 @@ class LemonSodaFactory : OrderFactory {
 }
 
 class MargheritaPizzaFactory: OrderFactory {
-       
     func createOrder() -> Order {
         return MargheritaPizza()
     }
 }
 
 class CheeseBurgerFactory : OrderFactory {
-    
     func createOrder() -> Order {
         return CheeseBurger()
     }
@@ -134,7 +131,12 @@ class FrenchFriesFactory : OrderFactory {
     }
 }
 
-///Client
+
+//Client
+enum OrderItem  {
+    case LemonSoda, MargheritaPizza, CheeseBurger, FrenchFries
+}
+
 class Client {
     var clientName : String
     var orderItem : OrderItem
@@ -160,10 +162,6 @@ class Client {
         print("Welcome, \(clientName)")
         return orderFactory.createOrder()
     }
-}
-
-enum OrderItem  {
-    case LemonSoda, MargheritaPizza, CheeseBurger, FrenchFries
 }
 
 let client = Client(clientName: "Jim", orderItem: .MargheritaPizza)
